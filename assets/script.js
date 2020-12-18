@@ -1,3 +1,10 @@
+//add window.confirms to ask types of characters allowed for the password
+  //lowercase, uppercase, numeric, and/or special characters
+//add window.prompt to ask the desired password length
+  //between 8 and 128 characters
+//data is processed and generated either in an alert or ideally on the webpage
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
