@@ -1,29 +1,39 @@
 //add window.confirms to ask types of characters allowed for the password
-  //lowercase, uppercase, numeric, and/or special characters (  !"#$%&'()*+,-./  :;<=>?@  [\]^_`  {|}~  )
+  //lowercase, uppercase, numeric, and/or special characters
 //add window.prompt to ask the desired password length
   //between 8 and 128 characters
 //data is processed and generated either in an alert or ideally on the webpage
 
-function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-};
-console.log(getRandomLower());
+var howLong = window.prompt("How long would you like your password to be?") 
+while (howLong < 8 || howLong > 128) {
+  howLong = window.prompt("This generator can make passwords between 8 and 128 characters long. How long would you like your password to be?");
+}
+howLong = parseInt(howLong);
+
+
+var uppercaseConfirm = window.confirm("Can your password contain uppercase letters?");
+var lowercaseConfirm = window.confirm("Can it contain lowercase letters?");
+var numbersConfirm = window.confirm("How about numbers?");
+var symbolsConfirm = window.confirm("And symbols?");
+
 
 function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 };
-console.log(getRandomUpper());
+
+function getRandomLower() {
+	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+};
 
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+	return +String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 };
-console.log(getRandomNumber());
 
 function getRandomSymbol() {
-  var symbols = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-  return symbols[Math.floor(Math.random() * symbols.length)];
+	const symbols = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"
+	return symbols[Math.floor(Math.random() * symbols.length)];
 };
-console.log(getRandomSymbol());
+
 
 
 // Assignment Code
