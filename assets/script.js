@@ -15,6 +15,15 @@ var uppercaseConfirm = window.confirm("Can your password contain uppercase lette
 var lowercaseConfirm = window.confirm("Can it contain lowercase letters?");
 var numbersConfirm = window.confirm("How about numbers?");
 var symbolsConfirm = window.confirm("And symbols?");
+while (!(uppercaseConfirm || lowercaseConfirm || numbersConfirm || symbolsConfirm)) {
+  window.alert("You must select at least one character type!");
+  var uppercaseConfirm = window.confirm("Can your password contain uppercase letters?");
+  var lowercaseConfirm = window.confirm("Can it contain lowercase letters?");
+  var numbersConfirm = window.confirm("How about numbers?");
+  var symbolsConfirm = window.confirm("And symbols?");
+};
+
+
 
 
 function getRandomUpper() {
