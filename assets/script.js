@@ -1,3 +1,4 @@
+// User prompts start
 var howLong = window.prompt("How long would you like your password to be?") 
 while (howLong < 8 || howLong > 128) {
   howLong = window.prompt("This generator can make passwords between 8 and 128 characters long. How long would you like your password to be?");
@@ -15,6 +16,7 @@ while (!(uppercaseConfirm || lowercaseConfirm || numbersConfirm || symbolsConfir
   numbersConfirm = window.confirm("How about numbers?");
   symbolsConfirm = window.confirm("And symbols?");
 };
+// User prompts end
 
 function generatePassword() {
   var newPassword = "";
@@ -42,18 +44,16 @@ function generatePassword() {
 function getRandomUpper() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 };
-
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 };
-
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+  return Math.floor(Math.random() * 9);
 };
-
 function getRandomSymbol() {
-  return String.fromCharCode(Math.floor(Math.random() * 15) + 33) || String.fromCharCode(Math.floor(Math.random() * 7) + 58);
+  return String.fromCharCode(Math.floor(Math.random() * 15) + 33)
 };
+// Found source of character codes: https://net-comber.com/charset.html
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
