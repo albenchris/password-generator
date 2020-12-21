@@ -26,27 +26,19 @@ function generatePassword() {
     if (uppercaseConfirm) {
       newPassword += getRandomUpper(allowed.uppercaseConfirm);
     }
-    if (newPassword.length >= howLong) {
-      break;
-    }
+    if (newPassword.length >= howLong) break;
     if (lowercaseConfirm) {
       newPassword += getRandomLower(allowed.lowercaseConfirm);
     }
-    if (newPassword.length >= howLong) {
-      break;
-    }
+    if (newPassword.length >= howLong) break;
     if (numbersConfirm) {
       newPassword += getRandomNumber(allowed.numbersConfirm);
     }
-    if (newPassword.length >= howLong) {
-      break;
-    }
+    if (newPassword.length >= howLong) break;
     if (symbolsConfirm) {
       newPassword += getRandomSymbol(allowed.symbolsConfirm);
     }
   }
-  
-  
 
   return newPassword;
 };
